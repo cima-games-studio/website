@@ -1,0 +1,1433 @@
+/* Importación de fuentes */
+@font-face {
+  font-family: 'Heavitas';
+  src: url('assets/heavitas.woff2') format('woff2'),
+       url('assets/heavitas.woff') format('woff'),
+       url('assets/heavitas.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Myriad Pro';
+  src: url('assets/MyriadPro-BlackSemiCnIt.woff2') format('woff2'),
+       url('assets/MyriadPro-BlackSemiCnIt.woff') format('woff'),
+       url('assets/MyriadPro-BlackSemiCnIt.ttf') format('truetype');
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Myriad Pro';
+  src: url('assets/MyriadPro-BlackSemiCn.woff2') format('woff2'),
+       url('assets/MyriadPro-BlackSemiCn.woff') format('woff'),
+       url('assets/MyriadPro-BlackSemiCn.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* Variables */
+:root {
+  --primary-color: #5ecff9;
+  --secondary-color: #0099cc;
+  --text-color: #ffffff;
+  --dark-text: #333333;
+  --background-color: #ffffff;
+  --section-padding: 3rem 1rem;
+  
+  /* Familias de fuentes */
+  --title-font: 'Heavitas', sans-serif;
+  --heading-font: 'Myriad Pro', sans-serif;
+  --body-font: 'Myriad Pro', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--body-font);
+  line-height: 1.6;
+  color: var(--dark-text);
+  background-color: var(--background-color);
+  overflow-x: hidden;
+  font-weight: 900;
+}
+
+.container {
+  /* width: 100%; */
+  max-width: 1920px;
+  /* margin: 0 auto; */
+  /* padding: 0 1rem; */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Typography */
+h1,
+h2,
+h3 {
+  margin-bottom: 1rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  text-align: center;
+  color: var(--text-color);
+  margin-bottom: 2.5rem;
+  font-weight: bold;
+  font-family: var(--heading-font);
+}
+
+.section-title-blue {
+  font-size: 2.5rem;
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 2.5rem;
+  font-weight: bold;
+  font-family: var(--heading-font);
+}
+
+.section-title-left {
+  font-size: 2.2rem;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  font-weight: 900;
+  font-family: var(--heading-font);
+  font-style: italic;
+}
+
+/* Header/Hero Section */
+.hero {
+  background: url("assets/Fondo_Rayas_Mesa de trabajo 1.png");
+  background-size: cover;
+  background-position: center;
+  color: var(--text-color);
+  text-align: center;
+  padding: 2rem 1rem 4rem;
+  position: relative;
+  overflow: visible;
+  margin-bottom: -60px;
+  z-index: 1;
+}
+
+.main-title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  font-family: var(--title-font);
+  letter-spacing: 1px;
+}
+
+.mountain-container {
+  max-width: 480px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.mountain {
+  width: 100%;
+  max-height: 480px;
+  object-fit: contain;
+}
+
+/* Clouds */
+/* .clouds-hero {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: -30px;
+  position: relative;
+  z-index: 1;
+}
+
+.clouds-hero-img {
+  max-width: 40%;
+  height: auto;
+}
+
+.clouds {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  background-position: center;
+}
+
+.clouds-top {
+  position: absolute;
+  top: -25px;
+  left: -5;
+  width: 100%;
+  z-index: 3;
+}
+
+.clouds-top-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-width: 100%;
+}
+
+.clouds-bottom {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.clouds-bottom-img {
+  width: 100%;
+  height: auto;
+  display: block;
+} */
+
+/* About Section */
+.about {
+  background-color: var(--background-color);
+  padding: 4rem 1rem 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.about-text {
+  flex: 3;
+}
+
+.about-text h2 {
+  color: var(--primary-color);
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  margin-top: -1rem;
+}
+
+.about-text p {
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  font-family: var(--body-font);
+  font-weight: 900;
+}
+
+.tagline-container {
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.tagline {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  padding: 0.5rem 2rem 0.5rem 1rem;
+  border-radius: 0 25px 25px 0;
+  display: inline-block;
+  font-weight: bold;
+  font-family: var(--body-font);
+  min-width: 200px;
+}
+
+.about-logo {
+  flex: 1;
+  max-width: 100px;
+  margin-top: 0.5rem;
+}
+
+.logo {
+  width: 100%;
+}
+
+/* Games Section */
+.games {
+  background: url("assets/Fondo_Copos_Mesa de trabajo 1.png");
+  background-size: cover;
+  background-position: center;
+  padding: var(--section-padding);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Títulos de secciones con más espacio abajo */
+.games .section-title,
+.upcoming-games .section-title-blue {
+  margin-bottom: 3rem;
+}
+
+.games-grid {
+  display: flex;
+  padding: 10px 0;
+  gap: 1.5rem;
+}
+
+.game-card {
+  width: 150px;
+  position: relative;
+  margin-bottom: 1rem;
+  /* border: 4px solid white; */
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.7s ease;
+}
+
+.game-card-inner {
+  background: repeating-linear-gradient(-45deg, #f5f5f5, #f5f5f5 10px, #eeeeee 10px, #eeeeee 20px);
+  position: relative;
+  padding: 15px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.game-placeholder {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  background-color: #555555;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.game-placeholder-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* object-fit: contain; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0;
+  border-radius: 6px;
+}
+
+.game-title-container {
+  background: transparent;
+  padding: 0.7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-title {
+  font-family: var(--heading-font);
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  text-align: center;
+  padding: 0.2rem 0.5rem;
+  margin: 0;
+  position: relative;
+  display: inline-block;
+}
+
+/* Upcoming Games Section */
+.upcoming-games {
+  background-color: white;
+  padding: var(--section-padding);
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.upcoming-games-list {
+  display: flex;
+  flex-direction: row;
+  padding: 10px 0;
+  gap: 1.5rem;
+}
+
+.upcoming-game {
+  width: 100%;
+  min-width: 280px;
+  max-width: 400px;
+}
+
+.upcoming-game-container {
+  display: flex;
+  flex-direction: column;
+  /* background: repeating-linear-gradient(-45deg, #f5f5f5, #f5f5f5 10px, #eeeeee 10px, #eeeeee 20px); */
+  background: var(--primary-color);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  padding: 15px;
+}
+
+.upcoming-game-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.35);
+}
+
+.upcoming-game-gray-area {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.game-placeholder-upcoming {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  background-color: #555;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.game-placeholder-upcoming-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: filter 0.3s ease, opacity 0.3s ease;
+  border-radius: 6px;
+}
+
+.upcoming-game-container:hover .game-placeholder-upcoming-img {
+  opacity: 0.7;
+  filter: grayscale(50%);
+}
+
+.lock-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+}
+
+.lock-icon {
+  width: 100%;
+  height: auto;
+}
+
+.upcoming-game-info {
+  padding: 0.5rem 0;
+  margin-top: 10px;
+}
+
+.upcoming-game-title {
+  font-family: var(--heading-font);
+  font-size: 1.3rem;
+  margin: 0 0 0.5rem;
+  color:#ffffff;
+  text-align: center;
+}
+
+.upcoming-game-desc {
+  font-family: var(--body-font);
+  color:#ffffff;
+  font-size: 0.9rem;
+  margin: 0;
+  line-height: 1.4;
+  text-align: center;
+}
+
+/* Contact Section */
+.contact {
+  background: url("assets/Fondo_Copos_Mesa de trabajo 1.png");
+  background-size: cover;
+  background-position: center;
+  padding: var(--section-padding);
+  position: relative;
+  color: var(--text-color);
+  padding-top: 120px;
+  padding-bottom: 60px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.social-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  background-color: var(--text-color);
+  color: var(--primary-color);
+  font-size: 1.8rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.social-icon i {
+  font-size: 1.8rem;
+}
+
+.clouds-contact {
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+}
+
+.clouds-contact-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-width: 100%;
+}
+
+/* Media Queries */
+@media (min-width: 576px) {
+  .games-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .about-content {
+    flex-direction: row;
+  }
+
+  .games-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .upcoming-game-image {
+    min-width: 120px;
+  }
+  
+  .main-title {
+    font-size: 4rem;
+  }
+  
+  .hero {
+    padding: 3rem 1rem 5rem;
+    margin-bottom: -80px;
+  }
+  
+  .mountain-container {
+    max-width: 380px;
+  }
+
+  .about-text h2 {
+    font-size: 2.2rem;
+  }
+  
+  .about-logo {
+    max-width: 180px;
+  }
+
+  .tagline {
+    padding: 0.5rem 3rem 0.5rem 1.5rem;
+    min-width: 250px;
+  }
+
+  .game-card {
+    margin-bottom: 1.5rem;
+  }
+  
+  .upcoming-game-container {
+    flex-direction: row;
+    height: auto;
+    padding: 0;
+    align-items: stretch;
+  }
+  
+  .upcoming-game-gray-area {
+    width: 200px;
+    height: auto;
+    margin-bottom: 0;
+    border-radius: 8px 0 0 8px;
+  }
+  
+  .game-placeholder-upcoming {
+    height: 100%;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-radius: 8px 0 0 8px;
+  }
+  
+  .upcoming-game-info {
+    padding: 1.5rem;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: var(--primary-color);
+  }
+  
+  .upcoming-game-title {
+    font-size: 1.5rem;
+    color: white;
+    text-align: left;
+  }
+  
+  .upcoming-game-desc {
+    color: white;
+    opacity: 0.9;
+    text-align: left;
+  }
+}
+
+@media (min-width: 992px) {
+  .main-title {
+    font-size: 4rem;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+  }
+
+  .section-title-left {
+    font-size: 2.5rem;
+    text-align: left;
+  }
+
+  .hero {
+    padding: 3rem 1rem 6rem;
+    margin-bottom: -100px;
+  }
+
+  .mountain-container {
+    max-width: 420px;
+  }
+  
+  .about-logo {
+    max-width: 200px;
+  }
+  
+  .game-title {
+    font-size: 1.4rem;
+  }
+
+  .game-card {
+    max-width: 260px;
+    margin: 0 auto;
+  }
+  
+  .games-grid-desktop .game-card {
+    max-width: 80%;
+  }
+  
+  .games-grid-desktop {
+    gap: 1.5rem;
+  }
+  
+  .game-placeholder {
+    padding-bottom: 80%;
+  }
+  
+  .upcoming-games {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .about-content {
+    max-width: 900px;
+    margin: 0 auto;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  
+  .about-text {
+    flex: 6;
+    padding-right: 1rem;
+  }
+  
+  .about-logo {
+    flex: 1;
+    max-width: 140px;
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .section-title-left {
+    font-size: 2.2rem;
+    margin-top: 0;
+  }
+  
+  .tagline-container {
+    margin-top: 1rem;
+  }
+
+  .game-card-inner {
+    padding: 10px;
+  }
+  
+  .upcoming-game-container {
+    flex-direction: row;
+    background: var(--primary-color);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+    padding: 0;
+    margin-bottom: 20px;
+    height: auto;
+  }
+  
+  .upcoming-game-gray-area {
+    width: 30%;
+    min-width: 250px;
+    height: auto;
+    background-color: #555;
+    margin: 0;
+    border-radius: 0;
+    overflow: hidden;
+  }
+  
+  .game-placeholder-upcoming {
+    padding-bottom: 0;
+    height: 100%;
+    margin-bottom: 0;
+    border-radius: 0;
+    position: relative;
+  }
+  
+  .game-placeholder-upcoming-img {
+    filter: grayscale(70%);
+    opacity: 0.5;
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .upcoming-game-info {
+    padding: 2rem;
+    background-color: var(--primary-color);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+  }
+  
+  .upcoming-game-title {
+    font-size: 1.8rem;
+    color: white;
+    text-align: left;
+    margin-bottom: 10px;
+  }
+  
+  .upcoming-game-desc {
+    color: white;
+    text-align: left;
+    opacity: 0.9;
+  }
+}
+
+/* Ajustes carrusel y grid */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* En escritorio usamos un grid, no carrusel */
+@media (min-width: 992px) {
+  .carousel-container {
+    padding: 0;
+  }
+  
+  .carousel-arrow {
+    display: none;
+  }
+  
+  .games-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    overflow: visible;
+    scroll-snap-type: none;
+  }
+  
+  .upcoming-games-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    overflow: visible;
+    scroll-snap-type: none;
+  }
+  
+  .game-card {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  
+  .upcoming-game {
+    width: 100%;
+    min-width: auto;
+    max-width: 100%;
+  }
+}
+
+/* En tablet */
+@media (min-width: 768px) and (max-width: 991px) {
+  .carousel-container {
+    padding: 0 40px;
+  }
+  
+  .carousel-items {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    gap: 1.5rem;
+  }
+  
+  .carousel-items::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .carousel-item {
+    scroll-snap-align: center;
+    flex-shrink: 0;
+    width: calc(50% - 0.75rem); /* Mostrar 2 elementos en tablet */
+  }
+  
+  .game-card {
+    width: 100%;
+  }
+  
+  .upcoming-game {
+    min-width: 100%;
+    width: 100%;
+    padding: 0 1rem;
+    box-sizing: border-box;
+  }
+  
+  .upcoming-game-container {
+    flex-direction: row;
+    background: var(--primary-color);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+    height: auto;
+    padding: 0;
+  }
+  
+  .upcoming-game-gray-area {
+    width: 200px;
+    height: auto;
+    background-color: #555;
+    margin: 0;
+    border-radius: 0;
+  }
+  
+  .game-placeholder-upcoming {
+    padding-bottom: 0;
+    height: 100%;
+    margin-bottom: 0;
+    border-radius: 0;
+  }
+  
+  .game-placeholder-upcoming-img {
+    filter: grayscale(70%);
+    opacity: 0.5;
+    border-radius: 0;
+  }
+}
+
+/* En móvil */
+@media (max-width: 767px) {
+  .carousel-container {
+    padding: 0 30px;
+  }
+  
+  .carousel-items {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    gap: 1rem;
+  }
+  
+  .carousel-items::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .carousel-item {
+    scroll-snap-align: center;
+    flex-shrink: 0;
+    width: 100%; /* Un solo elemento en móvil */
+  }
+  
+  .game-card {
+    width: 100%;
+  }
+  
+  .upcoming-game {
+    min-width: 100%;
+    width: 100%;
+    padding: 0 1rem;
+    box-sizing: border-box;
+  }
+  
+  .upcoming-game-container {
+    flex-direction: column;
+    height: auto;
+    /* background: repeating-linear-gradient(-45deg, #f5f5f5, #f5f5f5 10px, #eeeeee 10px, #eeeeee 20px); */
+    background: var(--primary-color);
+    padding: 15px;
+  }
+  
+  .upcoming-game-gray-area {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .upcoming-game-info {
+    padding: 1rem 0.5rem;
+  }
+  
+  .game-placeholder-upcoming {
+    height: 0;
+    padding-bottom: 56.25%;
+  }
+}
+
+.carousel-items.active {
+  cursor: grabbing;
+}
+
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.carousel-arrow:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-arrow.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.carousel-prev {
+  left: 0;
+}
+
+.carousel-next {
+  right: 0;
+}
+
+@media (max-width: 576px) {
+  .carousel-arrow {
+    width: 30px;
+    height: 30px;
+    font-size: 0.9rem;
+  }
+  
+  .upcoming-game-title {
+    font-size: 1.5rem;
+  }
+  
+  .upcoming-game-desc {
+    font-size: 0.9rem;
+  }
+  
+  .contact h2 {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    white-space: nowrap;
+  }
+}
+
+/* Clases de visualización por dispositivo */
+.mobile-tablet-only {
+  display: block;
+}
+
+.desktop-only {
+  display: none;
+}
+
+/* Estilos para grid de escritorio */
+.games-grid-desktop {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.upcoming-games-list-desktop {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Media queries para mostrar/ocultar según dispositivo */
+@media (min-width: 992px) {
+  .mobile-tablet-only {
+    display: none;
+  }
+  
+  .desktop-only {
+    display: block;
+  }
+  
+  .games-grid-desktop {
+    display: grid;
+  }
+  
+  .upcoming-games-list-desktop {
+    display: flex;
+  }
+  
+  .game-card {
+    margin-bottom: 0;
+  }
+}
+
+/* Media queries para dispositivos móviles */
+@media (max-width: 991px) {
+  .mobile-tablet-only {
+    display: block;
+  }
+  
+  .desktop-only {
+    display: none;
+  }
+}
+
+/* Media queries para tablet */
+@media (min-width: 768px) and (max-width: 991px) {
+  .carousel-container {
+    padding: 0 40px;
+  }
+  
+  .carousel-items {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    gap: 1.5rem;
+  }
+  
+  .carousel-items::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .carousel-item {
+    scroll-snap-align: center;
+    flex-shrink: 0;
+    width: calc(50% - 0.75rem); /* Mostrar 2 elementos en tablet */
+  }
+}
+
+/* Media queries para móvil */
+@media (max-width: 767px) {
+  .carousel-container {
+    padding: 0 30px;
+  }
+  
+  .carousel-items {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    gap: 1rem;
+  }
+  
+  .carousel-items::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .carousel-item {
+    scroll-snap-align: center;
+    flex-shrink: 0;
+    width: 100%; /* Un solo elemento en móvil */
+  }
+}
+
+/* Ajustes específicos para móvil */
+@media (max-width: 576px) {
+  .hero {
+    padding: 1.5rem 1rem 3rem;
+    margin-bottom: -2.5rem;
+  }
+
+  .main-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .mountain-container {
+    max-width: 220px;
+  }
+
+  .mountain {
+    max-height: 180px;
+  }
+
+  .about {
+    padding: 3.5rem 1rem 1.5rem;
+  }
+
+  .about-text h2 {
+    font-size: 1.6rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .about-text p {
+    margin-bottom: 0.8rem;
+    font-size: 0.95rem;
+  }
+
+  .tagline {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .about-logo {
+    flex: 1;
+    max-width: 80px;
+    margin-top: 1.5rem;
+  }
+
+  .section-title-left {
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Ajustes específicos para tablet */
+@media (min-width: 577px) and (max-width: 767px) {
+  .hero {
+    padding: 1.8rem 1rem 3.2rem;
+    margin-bottom: -2.8rem;
+  }
+
+  .main-title {
+    font-size: 2.8rem;
+  }
+
+  .mountain-container {
+    max-width: 250px;
+  }
+
+  .mountain {
+    max-height: 190px;
+  }
+
+  .about-text h2 {
+    font-size: 1.8rem;
+  }
+
+  .about-logo {
+    flex: 1;
+    max-width: 100px;
+    margin-top: 1.5rem;
+  }
+
+  .section-title-left {
+    font-size: 1.8rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .main-title {
+    font-size: 3.5rem;
+  }
+
+  .hero {
+    padding: 3rem 1rem 4rem;
+    margin-bottom: -3.5rem;
+  }
+
+  .mountain-container {
+    max-width: 350px;
+  }
+
+  .about {
+    padding: 4.5rem 1rem 2rem;
+  }
+
+  .about-text h2 {
+    font-size: 2.2rem;
+  }
+  
+  .about-logo {
+    max-width: 150px;
+  }
+}
+
+/* Ajustes específicos para escritorio */
+@media (min-width: 992px) {
+  .main-title {
+    font-size: 4rem;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+  }
+  
+  .section-title-left {
+    font-size: 2.5rem;
+    text-align: left;
+  }
+
+  .hero {
+    /* padding: 3rem 1rem 5rem; */
+    margin-bottom: -5rem;
+  }
+
+  .mountain-container {
+    max-width: 500px;
+  }
+  
+  .about-logo {
+    max-width: 120px;
+  }
+  
+  .game-title {
+    font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .games-grid-desktop {
+    gap: 2rem;
+  }
+  
+  .game-card {
+    max-width: 280px;
+  }
+}
+
+/* En dispositivos móviles */
+@media (max-width: 767px) {
+  .games .section-title,
+  .upcoming-games .section-title-blue {
+    margin-bottom: 2rem;
+  }
+  
+  .upcoming-games {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
+
+/* Contact section */
+.contact h2 {
+  font-family: var(--heading-font);
+}
+
+.game-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.35);
+}
+
+.upcoming-game-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.35);
+}
+
+@media (max-width: 575px) {
+  .game-card-inner {
+    padding: 10px;
+  }
+  
+  .game-title {
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .game-placeholder-upcoming-img {
+    filter: grayscale(70%);
+    opacity: 0.5;
+    border-radius: 0;
+  }
+  
+  .upcoming-game-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.35);
+  }
+  
+  .lock-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 50px;
+    height: 50px;
+  }
+  
+  .lock-icon {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (min-width: 992px) {
+  .upcoming-game-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.35);
+  }
+  
+  .lock-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 50px;
+    height: 50px;
+  }
+  
+  .lock-icon {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.upcoming-games-list-desktop .upcoming-game-container {
+  flex-direction: row;
+  background: var(--primary-color);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  padding: 0;
+  margin-bottom: 20px;
+  height: auto;
+}
+
+/* Modificar Nuestros Juegos Escritorio WEB */
+.upcoming-games-list-desktop .upcoming-game-gray-area {
+  width: 25%;
+  min-width: 150px;
+  height: auto;
+  background-color: #555;
+  margin: 10px;
+  border-radius:0px;
+  overflow: hidden;
+}
+
+.upcoming-games-list-desktop .game-placeholder-upcoming {
+  padding-bottom: 0;
+  height: 100%;
+  margin-bottom: 0;
+  border-radius: 0;
+  position: relative;
+}
+
+.upcoming-games-list-desktop .game-placeholder-upcoming-img {
+  filter: grayscale(70%);
+  opacity: 0.5;
+  border-radius: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: content;
+}
+
+.upcoming-games-list-desktop .upcoming-game-info {
+  padding: 2rem;
+  background-color: var(--primary-color);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+}
+
+.upcoming-games-list-desktop .upcoming-game-title {
+  font-size: 1.8rem;
+  color: white;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.upcoming-games-list-desktop .upcoming-game-desc {
+  color: white;
+  text-align: left;
+  opacity: 0.9;
+}
+
+.upcoming-games-list-desktop .lock-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.upcoming-games-list-desktop .lock-icon {
+  width: 100%;
+  height: auto;
+}
